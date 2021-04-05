@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,31 @@
     <link rel="stylesheet" href="./main.css">
     <title>Todo List App::</title>
 </head>
+
 <body>
     <header>
-        <h1>TODO LIST APP::</h1>    
+        <h1>TODO LIST APP::</h1>
     </header>
     <main>
         <section class='form'>
             <form method="POST" action='/todos'>
-            <input type="text" name='task' placeholder='Add Task To Do...' autofocus />
-            <button type='submit'>Add Task</button>
-        </form>    
+                <input type="text" name='task' placeholder='Add Task To Do...' minlength="5" autofocus required />
+                <button type='submit' id="btn-add">Add Task</button>
+            </form>
         </section>
 
         <section class="task-list">
             <ul>
                 <% for(i=0; i<task.length; i++)  { %>
 
-                <li><%= task[i].task %><button class="btn-delete">Delete</button></li>    
+                <li class='tasks'><%= task[i].task %>
+                    <button class="btn-delete"> Delete </button></li>
                 <% } %>
             </ul>
         </section>
     </main>
+    <script src='main.js'>
+    </script>
 </body>
+
 </html>

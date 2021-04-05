@@ -35,7 +35,7 @@ form>input:focus {
     transition: border 0.2s ease;
 }
 
-form button {
+form button#btn-add {
     padding: 7px 10px;
     background: none;
     font-weight: bold;
@@ -46,7 +46,7 @@ form button {
     border-radius: 18px;
 }
 
-form button:hover {
+form button#btn-add:hover {
     background: coral;
     color: white;
     transition: all 0.3s ease-in-out;
@@ -76,7 +76,7 @@ ul li:hover {
     font-weight: bold;
 }
 
-li>button {
+button.btn-delete {
     background-color: red;
     color: white;
     font-weight: bold;
